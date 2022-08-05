@@ -27,6 +27,11 @@ body{
     transform: translateY(-50%);
 }
 
+#wrapper .wait{
+    color: white;
+    font-size: 35px;
+}
+
 #wrapper input{
     height: 50px;
     width: 100%;
@@ -56,7 +61,7 @@ body{
 
 
 #country_profile{
-    display: none;
+    /* display: none; */
     width: 1000px;
     border-radius: 10px;
     margin: 0 auto;
@@ -64,6 +69,8 @@ body{
     position: relative;
     padding: 10px;
     background-color: white;
+    transform: scale(0);
+    transition: 0.5s linear;
 }
 
 #country_profile #banner > img{
@@ -130,3 +137,52 @@ body{
 #country_profile main .right .glance .box p{
     font-size: 25px;
 }
+
+
+
+/* responsive */
+@media screen and (max-width: 500px) {
+    #wrapper{
+        width: 80%;
+    }
+
+    #wrapper input{
+        font-size: 20px;
+    }
+
+    #country_profile{
+        width: 100%;
+    }
+
+    #country_profile #banner{
+        height: 200px;
+    }
+
+    #country_profile #banner > img{
+        height: 200px;
+    }
+
+    #country_profile main{
+        flex-direction: column;
+        top: 100px;
+    }
+
+    #country_profile main .left{
+        width: 100%;
+    }
+
+    #country_profile main .right{
+        display: block;
+        width: 100%;
+    }
+
+    #country_profile main .right .glance .box{
+        width: 100%;
+    }
+
+
+    
+}
+
+
+/* responsive end */

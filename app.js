@@ -4,12 +4,14 @@ const search_btn = document.getElementById("search");
 
 search_btn.addEventListener("click", () => {
 
-    document.getElementById("country_profile").style.display = "initial";
+    
 
     const input = document.getElementById("country").value;
     let state = input;
     let api = `https://restcountries.com/v3.1/name/${state}?fullText=true`;
 
+    document.getElementById("wrapper").innerHTML = `<h1 class="wait">Please Wait.....</h1>`;
+    
 
     fetch(api).then(response => response.json()).then(data => {
         console.log(data);
@@ -42,5 +44,9 @@ search_btn.addEventListener("click", () => {
         document.getElementById("sub_region").innerHTML = `${data[0].subregion}`
         document.getElementById("time_zone").innerHTML = `${data[0].timezones[0]}`
     })
+
+    setTimeout(function(){document.getElementById("country_profile").style.transform = "scale(1)";}, 2000);
+
+    
 })
 
