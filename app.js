@@ -23,7 +23,7 @@ search_btn.addEventListener("click", () => {
         <img id="flag" src="${data[0].flags.png}" alt="">
 
 
-        <img id="icon" src="${data[0].coatOfArms.png}" alt="">
+        <img id="icon" src="${data[0].coatOfArms.svg}" alt="">
         `;
 
 
